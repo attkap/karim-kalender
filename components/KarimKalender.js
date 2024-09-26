@@ -103,7 +103,7 @@ const KarimKalender = () => {
       </h1>
       <div className="flex flex-col lg:flex-row lg:space-x-8">
         <div className="lg:w-3/4">
-          <div className="grid gap-6">
+          <div className="grid lg:grid-cols-3 gap-6">
             {MONTHS.map((_, index) => renderMonth(index))}
           </div>
         </div>
