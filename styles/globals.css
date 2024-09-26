@@ -1,27 +1,23 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Add any custom styles here */
+@keyframes gradient {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 15s ease infinite;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.shadow-neon {
+  box-shadow: 0 0 5px theme('colors.purple.400'), 0 0 20px theme('colors.purple.600');
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.shadow-neon-intense {
+  box-shadow: 0 0 10px theme('colors.purple.400'), 0 0 30px theme('colors.purple.600'), 0 0 50px theme('colors.purple.800');
 }
