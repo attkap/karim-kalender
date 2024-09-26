@@ -39,7 +39,7 @@ const KarimKalender = () => {
     setYearProgress((daysPassed / totalDays) * 100);
 
     setDaysUntilMeetup(Math.max(0, differenceInDays(karimVisitStart, currentDate)));
-  }, [currentDate]);
+  }, [currentDate, karimVisitStart]);
 
   const handleDateSelect = (date) => {
     setSelectedDate(date);
@@ -120,7 +120,7 @@ const KarimKalender = () => {
                 </div>
               </div>
               <p className="text-center text-xl text-gray-300 mt-4">
-                Until Karim's lovely visit! ❤️
+                Until Karim&apos;s lovely visit! ❤️
               </p>
             </div>
             <div className="bg-gray-800 bg-opacity-50 backdrop-filter backdrop-blur-xl rounded-lg shadow-neon p-6 transition-all duration-300 transform hover:shadow-neon-intense">
